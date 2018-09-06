@@ -206,9 +206,9 @@ namespace Harmony
 			info.argumentTypes = types.ToArray();
 		}
 		
-		public HarmonyPatch(string type, string methodName, Type[] argumentTypes = null)
+		public HarmonyPatch(string typeName, string methodName, Type[] argumentTypes = null)
 		{
-			info.declaringType = Type.GetType(type);
+			info.declaringType = Type.GetType(typeName);
 			info.methodName = methodName;
 			info.argumentTypes = argumentTypes;
 		}
