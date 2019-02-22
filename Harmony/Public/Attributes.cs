@@ -246,6 +246,13 @@ namespace Harmony
 			ParseSpecialArguments(argumentTypes, argumentVariations);
 		}
 
+		public HarmonyPatch(string typeName, string methodName, Type[] argumentTypes = null)
+		{
+			info.declaringType = Type.GetType(typeName);
+			info.methodName = methodName;
+			info.argumentTypes = argumentTypes;
+		}
+
 		//
 
 		void ParseSpecialArguments(Type[] argumentTypes, ArgumentType[] argumentVariations)
