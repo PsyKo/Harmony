@@ -2,20 +2,20 @@ namespace HarmonyTests.Assets
 {
 	public class AccessToolsClass
 	{
-		private class Inner
+		class Inner
 		{
 		}
 
-		private string field;
-		private string field2;
+		string field;
+		readonly string field2;
 
-		private int _property;
-		private int Property
+		int _property;
+		int Property
 		{
 			get => _property;
 			set => _property = value;
 		}
-		private int Property2
+		int Property2
 		{
 			get => _property;
 			set => _property = value;
@@ -41,5 +41,9 @@ namespace HarmonyTests.Assets
 		{
 			field = val;
 		}
+	}
+
+	public class AccessToolsSubClass : AccessToolsClass
+	{
 	}
 }
